@@ -13,7 +13,7 @@ try {
     $di = new \Phalcon\DI\FactoryDefault();
     $di->set('view', function() {
         $view = new \Phalcon\Mvc\View();
-        $view->setViewsDir('../app/views');
+        $view->setViewsDir('../app/views/');
         return $view;
     });
 
