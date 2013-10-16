@@ -1,6 +1,10 @@
 <?php
 
-class Project extends \Phalcon\Mvc\Model
+class Project extends BaseModel
 {
+    public function initialize()
+    {
 
+        $this->belongsTo('user_id', 'User', 'id');
+    }
 }
