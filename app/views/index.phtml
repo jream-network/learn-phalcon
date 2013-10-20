@@ -2,11 +2,15 @@
 <html>
 <head>
     <title>My Phalcon</title>
+    <?php $this->assets->outputCss()?>
+    <?php $this->assets->outputJs()?>
 </head>
 <body>
 
-<h1>Login Layout</h1>
 <?=$this->getContent();?>
+
+<div id="footer">
+</div>
 
 </body>
 </html>

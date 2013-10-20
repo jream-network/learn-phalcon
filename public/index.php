@@ -30,6 +30,22 @@ try {
         return $view;
     });
 
+    // Session
+    $di->setShared('session', function() {
+        $session = new \Phalcon\Session\Adapter\Files();
+        $session->start();
+        return $session;
+    });
+
+    // Meta-Data
+    $di['modelsMetadata'] = function() {
+        $metaData = new \Phalcon\Mvc\Model\MetaData\Apc([
+            "lifetime" => 86400,
+            "prefix"   => "metaData"
+        ]);
+        return $metaData;
+    };
+
     // Deploy the App
     $app = new \Phalcon\Mvc\Application($di);
     echo $app->handle()->getContent();

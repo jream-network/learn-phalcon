@@ -1,10 +1,37 @@
 <?php
 
-class IndexController extends \Phalcon\Mvc\Controller
+class IndexController extends BaseController
 {
     public function indexAction()
     {
         echo "Hello World!";
+    }
+
+    public function startSessionAction()
+    {
+        $this->session->set('user', [
+            'name' => 'Ted',
+            'age' => 55,
+            'soOn' => 'soForth'
+        ]);
+        $this->session->set('name', 'Jesse');
+    }
+
+    public function getSessionAction()
+    {
+        $user = $this->session->get('user');
+        print_r($user);
+        echo $this->session->get('name');
+    }
+
+    public function removeSessionAction()
+    {
+        echo $this->session->remove('name');
+    }
+
+    public function destroySessionAction()
+    {
+        echo $this->session->destroy();
     }
 
 }

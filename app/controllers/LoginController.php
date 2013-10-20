@@ -1,11 +1,10 @@
 <?php
 
-class LoginController extends \Phalcon\Mvc\Controller
+class LoginController extends BaseController
 {
 
     public function initialize()
     {
-        $this->view->setTemplateAfter('default');
     }
 
     public function indexAction()
