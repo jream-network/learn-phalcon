@@ -1,10 +1,12 @@
 <?php
 
+use Phalcon\Tag;
+
 class IndexController extends BaseController
 {
+
     public function indexAction()
     {
-        echo "Hello World!";
     }
 
     public function startSessionAction()

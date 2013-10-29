@@ -1,9 +1,20 @@
-<h1>Login Index</h1>
+{% extends "templates/base.volt" %}
 
-<?=print_r($single->email)?>
+{% block head %}
+    {{ this.assets.outputCss('extra') }}
+{% endblock %}
 
-<hr />
+{% block content %}
+    <h1>Login Index</h1>
 
-<?php foreach ($all as $user):?>
-    <?=$user->email?><br />
-<?php endforeach;?>
+    <form class="form-signin">
+        <h2 class="form-signin-heading">Please sign in</h2>
+        <input type="text" class="form-control" placeholder="Email address" autofocus>
+        <input type="password" class="form-control" placeholder="Password">
+        <label class="checkbox">
+            <input type="checkbox" value="remember-me"> Remember me
+        </label>
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+    </form>
+{% endblock %}
+

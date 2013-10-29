@@ -41,13 +41,13 @@ try {
     });
 
     // Meta-Data
-    $di['modelsMetadata'] = function() {
-        $metaData = new \Phalcon\Mvc\Model\MetaData\Apc([
-            "lifetime" => 86400,
-            "prefix"   => "metaData"
-        ]);
-        return $metaData;
-    };
+    // $di['modelsMetadata'] = function() {
+    //     $metaData = new \Phalcon\Mvc\Model\MetaData\Apc([
+    //         "lifetime" => 86400,
+    //         "prefix"   => "metaData"
+    //     ]);
+    //     return $metaData;
+    // };
 
     // Deploy the App
     $app = new \Phalcon\Mvc\Application($di);

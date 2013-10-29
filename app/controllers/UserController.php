@@ -1,5 +1,7 @@
 <?php
 
+use Phalcon\Tag;
+
 class UserController extends BaseController
 {
     public function indexAction()
